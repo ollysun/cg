@@ -112,7 +112,6 @@ public class TransactionIntegrationTest {
         HttpEntity<String> entity = new HttpEntity<>(null, new HttpHeaders());
         ResponseEntity<Void> responseEntity = this.restTemplate
                 .exchange(getRootUrl() + "/transactions", HttpMethod.DELETE, entity, (Class<Void>) null);
-        //ResponseEntity<String> response = restTemplate.exchange("/books/1", HttpMethod.DELETE, entity, String.class);
         assertEquals(204, responseEntity.getStatusCodeValue());
     }
 }
